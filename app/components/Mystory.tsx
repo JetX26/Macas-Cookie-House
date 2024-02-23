@@ -16,7 +16,7 @@ const About = (): React.ReactNode => {
 
 
     return (
-        <div id="About" className='h-[1000px] bg-[#FFE5D4] flex gap-24  items-center xs:gap-6 xs:flex-col xs:h-auto xs:p-6 sm:gap-6 sm:flex-col sm:p-6 sm:h-auto md:h-auto md:flex-col md:p-10 lg:gap-4'>
+        <div id="About" className='h-[1000px] text-black bg-[#FFE5D4] flex gap-24  items-center xs:gap-6 xs:flex-col xs:h-auto xs:p-6 sm:gap-6 sm:flex-col sm:p-6 sm:h-auto md:h-auto md:flex-col md:p-10 lg:gap-4'>
             <div className='w-1/2 flex justify-end' ref={ref}>
                 <div>
                     <Image src={MariaPortrait} alt="Maria Veskov Portrait Photo"></Image>

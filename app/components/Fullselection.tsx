@@ -15,7 +15,7 @@ const Sectionplaceholder = (): React.ReactNode => {
 
 
     return (
-        <div className=' flex flex-col items-center xs:h-auto h-screen'>
+        <div className=' flex flex-col items-center xs:h-auto h-screen bg-white text-black'>
             <span className='w-full'>
                 <Navbar></Navbar>
             </span>

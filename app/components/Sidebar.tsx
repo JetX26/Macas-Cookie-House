@@ -19,16 +19,16 @@ const Sidebar = (): React.ReactNode => {
 
 
     return (
-        <div className='right-4 flex items-center h-full'>
+        <div className='right-4 flex items-center h-full text-black'>
             <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
-                <span className='flex active:scale-75 duration-300'>
+                <span className='flex active:scale-75 duration-300 '>
                     <Image src={BagIcon} width={30} alt="Open Cart"></Image>
                     <p className='absolute h-full px-[0.6rem] pt-[0.5rem]'>{cart.length}</p>
                     <label htmlFor="my-drawer-4" className="absolute btn opacity-0">Open drawer</label>
                 </span>
             </div>
-            <div className="drawer-side h-full">
+            <div className="drawer-side h-full ">
                 <label htmlFor="my-drawer-4" aria-label="close-sidebar" className="drawer-overlay"></label>
                 <div className="menu w-80 p-0 min-h-full bg-white text-base-content">
                     <div className='bg-[rgb(78,74,66)] text-white flex w-full justify-center p-8 relative'>

@@ -15,7 +15,7 @@ const Popularsec = (): React.ReactNode => {
 
 
     return (
-        <div className='h-[1000px] bg-white w-screen flex justify-center items-center xs:h-auto sm:h-auto xs:p-4 sm:p-4 md:h-auto md:w-auto lg:p-8'>
+        <div className='h-[1000px] text-black bg-white w-screen flex justify-center items-center xs:h-auto sm:h-auto xs:p-4 sm:p-4 md:h-auto md:w-auto lg:p-8'>
             <div ref={ref}>
                 <div className='flex items-center justify-center gap-24 xs:gap-12 md:gap-4 text-center xs:flex-col xs:w-auto sm:flex-col sm:w-auto sm:gap-12 md:w-auto md:flex-col'>
                     <div

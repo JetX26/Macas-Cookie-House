@@ -2,13 +2,11 @@
 
 import React from 'react'
 
+
 const Contact = () => {
 
-
-
     return (
-
-        <div id="Contact" className=' bg-[#e6beae] sm:p-8'>
+        <div id="Contact" className=' bg-gray-600 sm:p-8'>
             <div className=' flex flex-col items-center justify-center h-full'>
                 <div className=' pt-20'>
                 </div>
@@ -31,24 +29,23 @@ const Contact = () => {
                                 <p>Sunday: 10am-2pm</p>
                             </div>
                         </div>
-                        <div className=' flex flex-col gap-2'>
+                        <div className=' flex flex-col gap-2 text-black'>
                             <label htmlFor="firstname">First Name</label>
-                            <input type="text" id="firstname" className=' xs:w-[85%] sm:w-[85%] rounded-sm border-[2px] border-black' />
+                            <input type="text" id="firstname" className=' xs:w-[85%] sm:w-[85%] rounded-sm border-[2px] border-black bg-white' />
                             <label htmlFor="lastname">Last Name</label>
-                            <input type="text" id='lastname' className=' xs:w-[85%] sm:w-[85%] rounded-sm border-[2px] border-black' />
+                            <input type="text" id='lastname' className=' xs:w-[85%] sm:w-[85%] rounded-sm border-[2px] border-black bg-white' />
                             <label htmlFor="email">Email</label>
-                            <input type="text" id="email" className=' xs:w-[85%] sm:w-[85%] rounded-sm border-[2px] border-black' />
+                            <input type="text" id="email" className=' xs:w-[85%] sm:w-[85%] rounded-sm border-[2px] border-black bg-white' />
                             <label htmlFor="subject">Subject</label>
-                            <input type="text" id="subject" className=' xs:w-[85%] sm:w-[85%] rounded-sm border-[2px] border-black' />
+                            <input type="text" id="subject" className=' xs:w-[85%] sm:w-[85%] rounded-sm border-[2px] border-black bg-white' />
                             <label htmlFor="message">Message</label>
-                            <textarea className='xs:w-[85%] sm:w-[85%] rounded-sm border-[2px] border-black' name="message" id="message" cols={30} rows={7}></textarea>
+                            <textarea className='xs:w-[85%] sm:w-[85%] rounded-sm border-[2px] border-black bg-white' name="message" id="message" cols={30} rows={7}></textarea>
                             <button className=' bg-slate-800 text-white rounded-sm xs:w-[85%] sm:w-[85%]' type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div >
-
     );
 };
 

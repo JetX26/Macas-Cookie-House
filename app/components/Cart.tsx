@@ -33,15 +33,16 @@ const Cart = (): React.ReactNode => {
             <div className='w-full relative'>
                 <Navbar></Navbar>
             </div>
-            <div className='flex justify-center items-center h-screen w-full'>
+            <div className='flex justify-center items-center h-screen w-full bg-white text-black'>
                 <div className='   w-[50%] xs:w-full flex xs:flex-col sm:flex-col sm:w-full md:w-full md:flex-col lg:w-full lg:justify-center lg:items-center xl:w-full xl:justify-center xl:gap-12 xxl:gap-12 xxl:w-[90%]'>
-                    <div className='w-[60%] xs:w-full sm:w-full sm:flex sm:flex-col sm:items-center md:w-full md:flex md:flex-col md:items-center xs:flex xs:flex-col xs:items-center lg:w-1/2 lg:flex lg:items-center lg:justify-center lg:flex-col xl:w-1/2 xl:flex  xl:items-center xl:flex-col xl:justify-center flex flex-col justify-center items-center lg:h-[500px] '>
+                    <div className='w-[60%] xs:w-full sm:w-full sm:flex sm:flex-col sm:items-center md:w-full md:flex md:flex-col md:items-center xs:flex xs:flex-col xs:items-center lg:w-1/2 lg:flex lg:items-center lg:justify-center lg:flex-col xl:w-1/2 xl:flex  xl:items-center xl:flex-col xl:justify-center flex flex-col justify-start items-center lg:h-[500px] '>
                         <h2 className='p-4 m-4 text-xl'>My Cart</h2>
                         {cart.length > 0 ? cart.map((item, id) => {
-                            return <div key={id} className='relative p-4 m-4 flex xs:flex-col sm:flex-col sm:gap-4 gap-12 xs:gap-2 border-t-2 border-b-2 lg:w-full xl:w-full xxl:w-full'>
+                            return <div key={id} className='relative w-full p-4 m-4 flex justify-center items-center xs:flex-col xs:w-full xs:items-center sm:flex-col sm:w-full sm:gap-4 gap-12 xs:gap-2 border-t-2 border-b-2 lg:w-full xl:w-full xxl:w-full'>
                                 <Image src={item.image} width={100} className=' border-2' alt="Chocolate Box Image"></Image>
                                 <p className='w-[20%] xs:w-[20%] sm:w-[20%] md:w-[20%] lg:w-[20%] xl:w-[20%] xxl:w-[20%]'>{item.name}</p>
-                                <span className='flex justify-evenly items-center h-1/2 w-[20%] xs:w-[25%] lg:w-[30%] lg:h-[35%] xxl:w-[10%] border-black border-[1px]'>
+                                <p>{`$${item.price}`}</p>
+                                <span className='flex justify-evenly items-center h-1/2 w-[20%] xs:w-[50%] lg:w-[30%] lg:h-[35%] xxl:w-[10%] border-black border-[1px]'>
                                     <button onClick={() => {
                                         decreaseCartQty(item.id)
                                     }}>-</button>
@@ -51,9 +52,9 @@ const Cart = (): React.ReactNode => {
                                         increaseCartQty(item.id)
                                     }
                                     }>+</button>
+
                                 </span>
-                                <p className='absolute right-4'>{`$${item.price}`}</p>
-                                <button className='absolute bottom-0 right-4' onClick={() => {
+                                <button onClick={() => {
                                     removeFromCart(item.id)
                                 }}>Delete</button>
                             </div>

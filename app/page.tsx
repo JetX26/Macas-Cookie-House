@@ -10,6 +10,7 @@ import Contact from './components/Contact'
 import Goupbutton from './components/Goupbutton'
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
+import { ThemeProvider } from 'next-themes'
 
 
 
@@ -19,26 +20,28 @@ export default function Home(): React.ReactNode {
 
 
   return (
-    <main className='relative overflow-hidden'>
-      <div ref={ref}>
-        <Navbar></Navbar>
-      </div>
-      <div id="Hero">
-        <Hero></Hero>
-      </div>
-      <Popularsec></Popularsec>
+    <ThemeProvider attribute='class' defaultTheme='lightTheme'>
+      <main className='relative overflow-hidden'>
+        <div ref={ref}>
+          <Navbar></Navbar>
+        </div>
+        <div id="Hero">
+          <Hero></Hero>
+        </div>
+        <Popularsec></Popularsec>
 
-      <About></About>
-      <Contact></Contact>
-      {/* <Footer></Footer> */}
-      {isInView ? null : <motion.div
-        initial={{ y: "12rem", opacity: 0 }}
-        animate={{ x: '0', y: '0', opacity: 1 }}
-        transition={{ duration: 1 }}
-        className='fixed bottom-0 w-full'
-      >
-        <Goupbutton></Goupbutton>
-      </motion.div>}
-    </main >
+        <About></About>
+        <Contact></Contact>
+        {/* <Footer></Footer> */}
+        {isInView ? null : <motion.div
+          initial={{ y: "12rem", opacity: 0 }}
+          animate={{ x: '0', y: '0', opacity: 1 }}
+          transition={{ duration: 1 }}
+          className='fixed bottom-0 w-full'
+        >
+          <Goupbutton></Goupbutton>
+        </motion.div>}
+      </main >
+    </ThemeProvider>
   )
 }

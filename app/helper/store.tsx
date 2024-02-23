@@ -322,6 +322,6 @@ export const useZustandStore = create<zustandStoreInterface>((set, get) => ({
             quantity: 0,
             priceId: 'price_1OfFDhBD5NjyDBs6yfDUJRVy'
         },
-    ],
+    ]
 }));
 

@@ -15,7 +15,7 @@ const Cartitem = ({ image, id, quantity, name, price }: shopItemInterface): Reac
 
 
     return (
-        <div className='w-full'>
+        <div className='w-full text-black'>
             <div className='flex w-full justify-center items-center p-4'>
                 <Image src={image} className='w-1/2' alt="Placeholder"></Image>
                 <div className='flex flex-col items-center gap-2 w-1/2'>

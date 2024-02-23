@@ -15,7 +15,6 @@ const Productcomponent = ({ image, id, price, quantity, name, priceId }: shopIte
   const { addToCart, increaseQty, setTotalPrice, decreaseQty } = useZustandStore()
 
 
-
   return (
     <div>
       <div>
